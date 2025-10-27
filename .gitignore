@@ -1,0 +1,26 @@
+# ide
+.vscode/
+
+# Python-generated files
+__pycache__/
+*/migrations/__pycache__/
+*.py[oc]
+*.pyc
+*.pyo
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+!.env.example
+core/project/settings/local.py
+!static/.gitkeep
+*.sqlite*
+.venv/
+
+
+media/*
+staticfiles/*
