@@ -21,7 +21,7 @@
 
 ```bash
 # Клонируйте репозиторий
-git clone <your-repo-url>
+git clone https://github.com/GenyaElamkov/ConvertExcelToJson.git
 cd convertexceltojson
 
 # Установите зависимости
@@ -129,4 +129,4 @@ pre-commit run --all-files
 
 ## 📄 Лицензия
 
-MIT License
+Этот проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
