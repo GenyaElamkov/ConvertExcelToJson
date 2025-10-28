@@ -24,4 +24,4 @@ core/project/settings/local.py
 
 media/*
 staticfiles/*
-data/*
+!data/.gitkeep
