@@ -4,17 +4,17 @@ from unittest.mock import (
     patch,
 )
 
-from core.main import file_exists
+from core.main import load_workbook_safe
 
 
-def test_file_exists_success():
+def test_load_workbook_safe_success():
     mock_wb = MagicMock()
     with patch("core.main.load_workbook", return_value=mock_wb):
-        result = file_exists(Path("dummy.xlsx"))
+        result = load_workbook_safe(Path("dummy.xlsx"))
         assert result == mock_wb
 
 
-def test_file_exists_not_found():
+def test_load_workbook_safe_not_found():
     with patch("core.main.load_workbook", side_effect=FileNotFoundError()):
-        result = file_exists(Path("nonexistent.xlsx"))
+        result = load_workbook_safe(Path("nonexistent.xlsx"))
         assert result is None

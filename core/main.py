@@ -30,7 +30,7 @@ def load_workbook_safe(file_path: Path) -> Workbook | None:
 
 
 def convert_date_to_string(date: datetime) -> str:
-    return date.isoformat()
+    return date.date().isoformat()
 
 
 def get_data_from_excel(workbook: Workbook) -> List[Dict[str, Any]]:
@@ -49,7 +49,7 @@ def get_data_from_excel(workbook: Workbook) -> List[Dict[str, Any]]:
     return data
 
 
-def write_to_json_file(data: list, json_file_path: Path) -> None:
+def write_to_json_file(data: List[Dict[str, Any]], json_file_path: Path) -> None:
     with open(json_file_path, "w", encoding="utf-8") as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
