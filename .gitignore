@@ -24,4 +24,9 @@ core/project/settings/local.py
 
 media/*
 staticfiles/*
+
+data/*
 !data/.gitkeep
+!data/template_card.xlsx
+!data/other-important-file.txt
+result.json будет игнорироваться
