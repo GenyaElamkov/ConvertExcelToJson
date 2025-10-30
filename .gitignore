@@ -21,12 +21,12 @@ core/project/settings/local.py
 *.sqlite*
 .venv/
 
-
 media/*
 staticfiles/*
 
-data/*
+data/result.json
+data/*.json
+data/tempalte_card.xlsx
+
+!data/
 !data/.gitkeep
-!data/template_card.xlsx
-!data/other-important-file.txt
-result.json будет игнорироваться
