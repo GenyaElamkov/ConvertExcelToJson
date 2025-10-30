@@ -44,6 +44,8 @@ def get_data_from_excel(workbook: Workbook) -> List[Dict[str, Any]]:
             cell_value = sheet.cell(row=row, column=col_index + 1).value
             if isinstance(cell_value, datetime):
                 cell_value = convert_date_to_string(cell_value)
+            if cell_value is None:
+                cell_value = ""
             data_row[cell] = cell_value
         data.append(data_row)
     return data
